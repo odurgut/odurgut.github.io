@@ -6,21 +6,22 @@
 }
 html {
     background-color: #1c1d1d;
-    height: 100%;
-}
-body {
-    height: 100%;
+    height: 100vh;
 }
 .maindiv {
     display: flex;
     /* background-color: darkblue; */
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 
 .maindivdiv {
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     /* background-color: darkgoldenrod; */
 }
 .header {
@@ -83,4 +84,16 @@ body {
 }
 .blogref:active {
     color: #807e7e;
+}
+
+.memoji {
+    height: 15em;
+}
+
+.aboutme {
+    text-align: center;
+    font-size: 0.9em;
+    color: #9e9e9e;
+    width: 20em;
+    margin-top: 2em;
 }
