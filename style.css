@@ -6,15 +6,17 @@
 }
 html {
     background-color: #1c1d1d;
-    height: 100vh;
+    height: 100%;
 }
-
+body {
+    height: 100%;
+}
 .maindiv {
     display: flex;
     /* background-color: darkblue; */
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .maindivdiv {
@@ -34,25 +36,25 @@ html {
     padding-top: 10px;
 }
 
-.icon {
+.iconlinks {
     color: #9e9e9e;
     text-align: center;
     padding-top: 50px;
 }
 
-.iconbar {
+.icon {
     padding: 5px;
 }
-.iconbar:link {
+.icon:link {
     color: #9e9e9e;
 }
-.iconbar:visited {
+.icon:visited {
     color: #9e9e9e;
 }
-.iconbar:hover {
+.icon:hover {
     color: white;
 }
-.iconbar:active {
+.icon:active {
     color: black;
 }
 
@@ -63,22 +65,22 @@ html {
     font-size: 0.8em;
 }
 
-.blogdiv {
+.blogsection {
     padding-top: 40px;
     text-align: center;
 }
 
-.blog:link {
+.blogref:link {
     color: #9e9e9e;
     text-decoration: none;
 }
-.blog:visited {
+.blogref:visited {
     color: #9e9e9e;
 }
-.blog:hover {
+.blogref:hover {
     color: white;
     text-decoration: underline;
 }
-.blog:active {
+.blogref:active {
     color: #807e7e;
 }
