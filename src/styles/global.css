@@ -9,14 +9,13 @@
     https://tailwindcss.com/docs/customizing-colors#using-css-variables 
 */
 @layer base {
-
     /* light theme */
-    .theme-newspaper {
+    .theme-odurgut {
         /* Tailwind slate-900 #0f172a */
         --color-primary-main: 15 23 42;
 
         /* MY COLOR */
-        --color-my-color: 42 141 212;
+        --color-my-color: 42 98 212;
         /* Tailwind slate-900 #0f172a */
         --color-text-body: 15 23 42;
         /* Tailwind slate-900 #0f172a */
@@ -42,11 +41,10 @@
 
         /* primary-100 */
         --color-border-code: 244 244 245;
-
     }
 
     /* dark theme */
-    .theme-newspaper.dark {
+    .theme-odurgut.dark {
         /* white */
         --color-primary-main: 255 255 255;
 
@@ -81,11 +79,11 @@
     }
 
     :root {
-        font-family: theme('fontFamily.body');
-        background-color: theme('colors.bg.body');
-        color: theme('colors.text.body');
+        font-family: theme("fontFamily.body");
+        background-color: theme("colors.bg.body");
+        color: theme("colors.text.body");
         line-height: 1.9;
-        line-height: 2.0;
+        line-height: 2;
         scroll-behavior: smooth;
         /* smoother color transition on theme toggle */
         transition: background-color 0.3s ease;
@@ -97,21 +95,20 @@
     h4,
     h5,
     h6 {
-        font-family: theme('fontFamily.heading');
+        font-family: theme("fontFamily.heading");
     }
 }
 
 @layer components {
-
     /* ------ GLOBAL STYLES - START ------ */
     strong {
         font-weight: 600;
-        color: theme('colors.text.bold');
+        color: theme("colors.text.bold");
     }
 
     mark {
-        background-color: theme('colors.bg.selection');
-        color: theme('colors.text.selection');
+        background-color: theme("colors.bg.selection");
+        color: theme("colors.text.selection");
     }
 
     /* 
@@ -123,25 +120,31 @@
         background-repeat: no-repeat;
         background-size: 100% 2px;
         background-position: 0 100%;
-        background-image:
-            linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
+        background-image: linear-gradient(
+            to right,
+            theme("colors.text.link"),
+            theme("colors.text.link")
+        );
     }
 
     a:not(.unset):hover {
         transition: 0;
-        color: theme('colors.text.link');
-        background-image:
-        linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
+        color: theme("colors.text.link");
+        background-image: linear-gradient(
+            to right,
+            theme("colors.text.link"),
+            theme("colors.text.link")
+        );
     }
 
     code:not(pre code):not(.unset) {
-        background-color: theme('colors.bg.code');
-        color: theme('colors.text.code');
+        background-color: theme("colors.bg.code");
+        color: theme("colors.text.code");
         padding: 0.125rem 0.25rem;
         border-radius: 0.25rem;
         font-size: 0.875em;
         font-weight: 600;
-        border: 1px solid theme('colors.border.code');
+        border: 1px solid theme("colors.border.code");
         margin-bottom: 1.25em;
     }
 
@@ -155,12 +158,12 @@
         list-style: none;
     }
 
-    ul:not(:where([class~="prose"] *))>li {
+    ul:not(:where([class~="prose"] *)) > li {
         position: relative;
         padding-left: 1.375rem;
     }
 
-    ul:not(.unset):not(:where([class~="prose"] *))>li::before {
+    ul:not(.unset):not(:where([class~="prose"] *)) > li::before {
         position: absolute;
         left: 0;
         content: "⌾";
@@ -171,19 +174,19 @@
         padding-left: 1.125rem;
     }
 
-    ol:not(.unset):not(:where([class~="prose"] *))>li::marker {
-        color: rgb(var(--color-text-muted))
+    ol:not(.unset):not(:where([class~="prose"] *)) > li::marker {
+        color: rgb(var(--color-text-muted));
     }
 
-    ul:not(.unset):not(:where([class~="prose"] *))>li,
-    ol:not(.unset):not(:where([class~="prose"] *))>li {
+    ul:not(.unset):not(:where([class~="prose"] *)) > li,
+    ol:not(.unset):not(:where([class~="prose"] *)) > li {
         margin-top: 0.5em;
         margin-bottom: 0.5em;
     }
 
     ::selection {
-        background: theme('colors.bg.selection');
-        color: theme('colors.text.selection');
+        background: theme("colors.bg.selection");
+        color: theme("colors.text.selection");
     }
 
     /* ------ GLOBAL STYLES - END ------ */
@@ -193,12 +196,12 @@
         position: relative;
         box-decoration-break: clone;
         text-decoration: none;
-        transition: color .25s;
+        transition: color 0.25s;
     }
 
     .animated-link:hover {
         color: rgb(var(--color-my-color));
-        transition: color .25s;
+        transition: color 0.25s;
     }
 
     .animated-link.show {
